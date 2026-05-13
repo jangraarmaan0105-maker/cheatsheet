@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML & CSS Cheat Sheet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="resources/css/style.css"/>
+</head>
+<body>
+
+<!-- ═════A══════ HEADER ═══════════ -->
+<header>
+  <div class="header-eyebrow">1st version by ARMAAN SINGH JANGRA</div>
+  <h1>HTML &amp; CSS<br><span>Cheat Sheet</span></h1>
+  <p class="header-sub">
+    Your personal reference for building fast, clean, and beautiful websites.
+    Covering structure, semantics, selectors, layout, the box model, and more.
+  </p>
+</header>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="nav-pills">
+  <a href="#html-structure">HTML Structure</a>
+  <a href="#semantic">Semantic Tags</a>
+  <a href="#text">Text Elements</a>
+  <a href="#links-media">Links &amp; Media</a>
+  <a href="#forms">Forms</a>
+  <a href="#selectors">CSS Selectors</a>
+  <a href="#box-model">Box Model</a>
+  <a href="#typography">Typography</a>
+  <a href="#colors">Colors</a>
+  <a href="#flexbox">Flexbox</a>
+  <a href="#grid">Grid</a>
+  <a href="#specificity">Specificity</a>
+</nav>
+
+<!-- ═══════════ CARDS ═══════════ -->
+<main>
+
+  <!-- 1. HTML DOCUMENT STRUCTURE -->
+  <div class="card wide accent-gold" id="html-structure">
+    <div class="card-label">01 · HTML</div>
+    <h2>Document Structure</h2>
+    <pre data-lang="html"><span class="cmt">&lt;!-- Every HTML page starts here --&gt;</span>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="val">"en"</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="val">"UTF-8"</span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="val">"viewport"</span> <span class="attr">content</span>=<span class="val">"width=device-width, initial-scale=1.0"</span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Page Title<span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="val">"stylesheet"</span> <span class="attr">href</span>=<span class="val">"style.css"</span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+
+  <span class="tag">&lt;body&gt;</span>
+    <span class="cmt">&lt;!-- Visible content goes here --&gt;</span>
+    <span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="val">"app.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span></pre>
+  </div>
+
+  <!-- 2. SEMANTIC ELEMENTS -->
+  <div class="card accent-coral" id="semantic">
+    <div class="card-label">02 · HTML</div>
+    <h2>Semantic Tags</h2>
+    <table>
+      <thead><tr><th>Tag</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>&lt;header&gt;</code></td><td>Site or section header</td></tr>
+        <tr><td><code>&lt;nav&gt;</code></td><td>Navigation links</td></tr>
+        <tr><td><code>&lt;main&gt;</code></td><td>Primary page content (one per page)</td></tr>
+        <tr><td><code>&lt;section&gt;</code></td><td>Thematic grouping with heading</td></tr>
+        <tr><td><code>&lt;article&gt;</code></td><td>Self-contained content (post, card)</td></tr>
+        <tr><td><code>&lt;aside&gt;</code></td><td>Supplementary / sidebar content</td></tr>
+        <tr><td><code>&lt;footer&gt;</code></td><td>Site or section footer</td></tr>
+        <tr><td><code>&lt;figure&gt;</code></td><td>Image with optional caption</td></tr>
+        <tr><td><code>&lt;time&gt;</code></td><td>Machine-readable date / time</td></tr>
+        <tr><td><code>&lt;address&gt;</code></td><td>Contact information</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 3. TEXT ELEMENTS -->
+  <div class="card accent-mint" id="text">
+    <div class="card-label">03 · HTML</div>
+    <h2>Text Elements</h2>
+    <table>
+      <thead><tr><th>Tag</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><code>&lt;h1&gt;–&lt;h6&gt;</code></td><td>Headings (hierarchy matters)</td></tr>
+        <tr><td><code>&lt;p&gt;</code></td><td>Paragraph</td></tr>
+        <tr><td><code>&lt;strong&gt;</code></td><td>Important (bold)</td></tr>
+        <tr><td><code>&lt;em&gt;</code></td><td>Emphasis (italic)</td></tr>
+        <tr><td><code>&lt;span&gt;</code></td><td>Inline container (no meaning)</td></tr>
+        <tr><td><code>&lt;br&gt;</code></td><td>Line break (use sparingly)</td></tr>
+        <tr><td><code>&lt;hr&gt;</code></td><td>Thematic break / divider</td></tr>
+        <tr><td><code>&lt;blockquote&gt;</code></td><td>Long quotation</td></tr>
+        <tr><td><code>&lt;code&gt;</code></td><td>Inline code snippet</td></tr>
+        <tr><td><code>&lt;pre&gt;</code></td><td>Preformatted / whitespace text</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 4. LINKS & MEDIA -->
+  <div class="card accent-sky" id="links-media">
+    <div class="card-label">04 · HTML</div>
+    <h2>Links &amp; Media</h2>
+    <pre data-lang="html"><span class="cmt">&lt;!-- Anchor tag --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"https://example.com"</span>
+   <span class="attr">target</span>=<span class="val">"_blank"</span>
+   <span class="attr">rel</span>=<span class="val">"noopener noreferrer"</span><span class="tag">&gt;</span>
+  Visit Site
+<span class="tag">&lt;/a&gt;</span>
+
+<span class="cmt">&lt;!-- Image --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="val">"photo.jpg"</span>
+     <span class="attr">alt</span>=<span class="val">"Descriptive alt text"</span>
+     <span class="attr">width</span>=<span class="val">"800"</span> <span class="attr">height</span>=<span class="val">"400"</span>
+     <span class="attr">loading</span>=<span class="val">"lazy"</span><span class="tag">/&gt;</span>
+
+<span class="cmt">&lt;!-- Lists --&gt;</span>
+<span class="tag">&lt;ul&gt;</span> <span class="tag">&lt;li&gt;</span>Unordered item<span class="tag">&lt;/li&gt;</span> <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;ol&gt;</span> <span class="tag">&lt;li&gt;</span>Ordered item<span class="tag">&lt;/li&gt;</span> <span class="tag">&lt;/ol&gt;</span></pre>
+  </div>
+
+  <!-- 5. FORMS -->
+  <div class="card accent-lav" id="forms">
+    <div class="card-label">05 · HTML</div>
+    <h2>Forms</h2>
+    <pre data-lang="html"><span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="val">"/submit"</span> <span class="attr">method</span>=<span class="val">"post"</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="val">"email"</span><span class="tag">&gt;</span>Email<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="val">"email"</span> <span class="attr">id</span>=<span class="val">"email"</span>
+         <span class="attr">name</span>=<span class="val">"email"</span> <span class="attr">required</span><span class="tag">/&gt;</span>
+
+  <span class="tag">&lt;textarea</span> <span class="attr">name</span>=<span class="val">"msg"</span>
+             <span class="attr">rows</span>=<span class="val">"4"</span><span class="tag">&gt;&lt;/textarea&gt;</span>
+
+  <span class="tag">&lt;select</span> <span class="attr">name</span>=<span class="val">"colour"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="val">"red"</span><span class="tag">&gt;</span>Red<span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+
+  <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="val">"submit"</span><span class="tag">&gt;</span>Send<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span></pre>
+  </div>
+
+  <!-- 6. CSS SELECTORS -->
+  <div class="card wide accent-mint" id="selectors">
+    <div class="card-label">06 · CSS</div>
+    <h2>Selectors</h2>
+    <table>
+      <thead><tr><th>Selector</th><th>Example</th><th>Targets</th></tr></thead>
+      <tbody>
+        <tr><td>Universal</td><td><code>*</code></td><td>Every element</td></tr>
+        <tr><td>Type</td><td><code>p</code></td><td>All &lt;p&gt; elements</td></tr>
+        <tr><td>Class</td><td><code>.card</code></td><td>Elements with class="card"</td></tr>
+        <tr><td>ID</td><td><code>#hero</code></td><td>Element with id="hero"</td></tr>
+        <tr><td>Descendant</td><td><code>nav a</code></td><td>&lt;a&gt; anywhere inside &lt;nav&gt;</td></tr>
+        <tr><td>Child</td><td><code>ul &gt; li</code></td><td>Direct &lt;li&gt; children of &lt;ul&gt;</td></tr>
+        <tr><td>Adjacent Sibling</td><td><code>h2 + p</code></td><td>&lt;p&gt; immediately after &lt;h2&gt;</td></tr>
+        <tr><td>General Sibling</td><td><code>h2 ~ p</code></td><td>All &lt;p&gt; siblings after &lt;h2&gt;</td></tr>
+        <tr><td>Attribute</td><td><code>[type="email"]</code></td><td>Inputs with type email</td></tr>
+        <tr><td>Pseudo-class</td><td><code>a:hover</code></td><td>Link on hover</td></tr>
+        <tr><td>Pseudo-element</td><td><code>p::first-line</code></td><td>First line of &lt;p&gt;</td></tr>
+        <tr><td>:nth-child</td><td><code>li:nth-child(2n)</code></td><td>Every even &lt;li&gt;</td></tr>
+        <tr><td>:not()</td><td><code>input:not([type="submit"])</code></td><td>All inputs except submit</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 7. BOX MODEL -->
+  <div class="card accent-gold" id="box-model">
+    <div class="card-label">07 · CSS</div>
+    <h2>Box Model</h2>
+    <p>Every element is a rectangular box with four layers.</p>
+    <pre data-lang="css"><span class="sel">.box</span> {
+  <span class="prop">box-sizing</span>: <span class="val">border-box</span>; <span class="cmt">/* width includes padding+border */</span>
+  <span class="prop">margin</span>:  <span class="num">16px</span>;            <span class="cmt">/* outside — spacing from neighbours */</span>
+  <span class="prop">border</span>:  <span class="num">2px</span> <span class="val">solid</span> <span class="str">#333</span>;  <span class="cmt">/* the edge */</span>
+  <span class="prop">padding</span>: <span class="num">12px 20px</span>;       <span class="cmt">/* inside — space around content */</span>
+  <span class="prop">width</span>:   <span class="num">300px</span>;
+  <span class="prop">height</span>:  <span class="num">120px</span>;
+}</pre>
+    <div class="box-demo">
+      <div class="box-layer bl-margin">margin</div>
+      <div class="box-layer bl-border">border</div>
+      <div class="box-layer bl-padding">padding</div>
+      <div class="box-layer bl-content">content</div>
+      <div class="box-layer bl-padding">padding</div>
+      <div class="box-layer bl-border">border</div>
+      <div class="box-layer bl-margin">margin</div>
+    </div>
+  </div>
+
+  <!-- 8. TYPOGRAPHY -->
+  <div class="card accent-coral" id="typography">
+    <div class="card-label">08 · CSS</div>
+    <h2>Typography</h2>
+    <pre data-lang="css"><span class="sel">body</span> {
+  <span class="prop">font-family</span>: <span class="str">'Georgia'</span>, <span class="val">serif</span>;
+  <span class="prop">font-size</span>:   <span class="num">16px</span>;      <span class="cmt">/* base = 1rem */</span>
+  <span class="prop">font-weight</span>: <span class="num">400</span>;       <span class="cmt">/* 100–900 */</span>
+  <span class="prop">line-height</span>: <span class="num">1.6</span>;       <span class="cmt">/* unitless preferred */</span>
+  <span class="prop">letter-spacing</span>: <span class="num">0.01em</span>;
+  <span class="prop">text-align</span>: <span class="val">left</span>;
+  <span class="prop">color</span>: <span class="str">#1a1a1a</span>;
+}
+
+<span class="sel">h1</span> { <span class="prop">font-size</span>: <span class="val">clamp</span>(<span class="num">28px</span>, <span class="num">5vw</span>, <span class="num">64px</span>); }
+<span class="sel">::selection</span> { <span class="prop">background</span>: <span class="str">#f5c542</span>; }</pre>
+    <table>
+      <thead><tr><th>Unit</th><th>Relative To</th></tr></thead>
+      <tbody>
+        <tr><td><code>px</code></td><td>Absolute pixels</td></tr>
+        <tr><td><code>rem</code></td><td>Root element font-size</td></tr>
+        <tr><td><code>em</code></td><td>Parent element font-size</td></tr>
+        <tr><td><code>%</code></td><td>Parent element</td></tr>
+        <tr><td><code>vw/vh</code></td><td>Viewport width/height</td></tr>
+        <tr><td><code>clamp()</code></td><td>Fluid between min and max</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 9. COLORS -->
+  <div class="card accent-sky" id="colors">
+    <div class="card-label">09 · CSS</div>
+    <h2>Colors &amp; Variables</h2>
+    <pre data-lang="css"><span class="cmt">/* Define once, use everywhere */</span>
+<span class="sel">:root</span> {
+  <span class="prop">--brand</span>:   <span class="str">#f5c542</span>;
+  <span class="prop">--dark</span>:    <span class="str">#0d0d0f</span>;
+  <span class="prop">--text</span>:    <span class="str">#e8e8e0</span>;
+}
+
+<span class="sel">.button</span> {
+  <span class="prop">background</span>:   <span class="val">var</span>(--brand);
+
+  <span class="cmt">/* All valid colour syntaxes: */</span>
+  <span class="prop">color</span>:        <span class="str">#1a1a1a</span>;          <span class="cmt">/* hex */</span>
+  <span class="prop">border-color</span>: <span class="val">rgb</span>(<span class="num">245 197 66</span>);  <span class="cmt">/* rgb */</span>
+  <span class="prop">outline</span>:      <span class="val">hsl</span>(<span class="num">44 90% 61%</span>); <span class="cmt">/* hsl */</span>
+  <span class="prop">box-shadow</span>:   <span class="num">0 4px 24px</span>
+                <span class="val">rgb</span>(<span class="num">0 0 0 / 0.4</span>);  <span class="cmt">/* alpha */</span>
+}</pre>
+  </div>
+
+  <!-- 10. FLEXBOX -->
+  <div class="card wide accent-lav" id="flexbox">
+    <div class="card-label">10 · CSS</div>
+    <h2>Flexbox</h2>
+    <table>
+      <thead><tr><th>Property (Parent)</th><th>Values</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td><code>display</code></td><td><code>flex</code></td><td>Activates flex context</td></tr>
+        <tr><td><code>flex-direction</code></td><td><code>row</code> · <code>column</code> · <code>row-reverse</code></td><td>Main axis direction</td></tr>
+        <tr><td><code>flex-wrap</code></td><td><code>nowrap</code> · <code>wrap</code></td><td>Allow children to wrap</td></tr>
+        <tr><td><code>justify-content</code></td><td><code>flex-start</code> · <code>center</code> · <code>space-between</code> · <code>space-around</code></td><td>Align on main axis</td></tr>
+        <tr><td><code>align-items</code></td><td><code>stretch</code> · <code>center</code> · <code>flex-start</code> · <code>baseline</code></td><td>Align on cross axis</td></tr>
+        <tr><td><code>gap</code></td><td><code>12px</code> · <code>1rem 2rem</code></td><td>Space between items</td></tr>
+      </tbody>
+    </table>
+    <table style="margin-top:12px">
+      <thead><tr><th>Property (Child)</th><th>Values</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td><code>flex</code></td><td><code>1</code> · <code>0 0 200px</code></td><td>grow / shrink / basis shorthand</td></tr>
+        <tr><td><code>align-self</code></td><td><code>auto</code> · <code>center</code> · <code>flex-end</code></td><td>Override cross-axis for one item</td></tr>
+        <tr><td><code>order</code></td><td><code>0</code> (default) · any integer</td><td>Visual reorder without touching HTML</td></tr>
+      </tbody>
+    </table>
+    <div class="flex-demo">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+    </div>
+  </div>
+
+  <!-- 11. GRID -->
+  <div class="card accent-coral" id="grid">
+    <div class="card-label">11 · CSS</div>
+    <h2>CSS Grid</h2>
+    <pre data-lang="css"><span class="sel">.container</span> {
+  <span class="prop">display</span>: <span class="val">grid</span>;
+  <span class="prop">grid-template-columns</span>: <span class="val">repeat</span>(<span class="num">3</span>, <span class="num">1fr</span>);
+  <span class="prop">grid-template-rows</span>: <span class="val">auto</span>;
+  <span class="prop">gap</span>: <span class="num">16px</span>;
+}
+
+<span class="sel">.featured</span> {
+  <span class="prop">grid-column</span>: <span class="num">1</span> / <span class="val">span</span> <span class="num">2</span>; <span class="cmt">/* colspan=2 */</span>
+  <span class="prop">grid-row</span>:    <span class="num">1</span> / <span class="num">3</span>;      <span class="cmt">/* rowspan=2 */</span>
+}</pre>
+    <div class="grid-demo">
+      <div class="grid-item span2">span 2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+  </div>
+
+  <!-- 12. SPECIFICITY -->
+  <div class="card accent-gold" id="specificity">
+    <div class="card-label">12 · CSS</div>
+    <h2>Specificity</h2>
+    <p>When selectors conflict, higher specificity wins. Think of it as (IDs, Classes, Elements).</p>
+
+    <div class="spec-row">
+      <div class="spec-label"><code>*</code></div>
+      <div class="spec-bar-wrap"><div class="spec-bar" style="width:2%;background:var(--muted)"></div></div>
+      <div class="spec-val">0</div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-label"><code>div</code></div>
+      <div class="spec-bar-wrap"><div class="spec-bar" style="width:8%;background:var(--mint)"></div></div>
+      <div class="spec-val">1</div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-label"><code>.class</code></div>
+      <div class="spec-bar-wrap"><div class="spec-bar" style="width:30%;background:var(--sky)"></div></div>
+      <div class="spec-val">10</div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-label"><code>#id</code></div>
+      <div class="spec-bar-wrap"><div class="spec-bar" style="width:65%;background:var(--coral)"></div></div>
+      <div class="spec-val">100</div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-label"><code>style=""</code></div>
+      <div class="spec-bar-wrap"><div class="spec-bar" style="width:90%;background:var(--gold)"></div></div>
+      <div class="spec-val">1000</div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-label"><code>!important</code></div>
+      <div class="spec-bar-wrap"><div class="spec-bar" style="width:100%;background:#ff4f4f"></div></div>
+      <div class="spec-val">∞</div>
+    </div>
+
+    <pre style="margin-top:14px" data-lang="css"><span class="cmt">/* specificity: 0-1-1 = 11 */</span>
+<span class="sel">div.card</span> { <span class="prop">color</span>: <span class="val">red</span>; }
+
+<span class="cmt">/* specificity: 1-0-0 = 100 — wins */</span>
+<span class="sel">#hero</span>     { <span class="prop">color</span>: <span class="val">blue</span>; }</pre>
+  </div>
+
+  <!-- 13. POSITIONING -->
+  <div class="card accent-lav" id="positioning">
+    <div class="card-label">13 · CSS</div>
+    <h2>Positioning</h2>
+    <table>
+      <thead><tr><th>Value</th><th>Behaviour</th></tr></thead>
+      <tbody>
+        <tr><td><code>static</code></td><td>Default — normal flow, top/left/etc. ignored</td></tr>
+        <tr><td><code>relative</code></td><td>Normal flow, offset from own position</td></tr>
+        <tr><td><code>absolute</code></td><td>Removed from flow, relative to nearest positioned ancestor</td></tr>
+        <tr><td><code>fixed</code></td><td>Removed from flow, relative to viewport (stays on scroll)</td></tr>
+        <tr><td><code>sticky</code></td><td>Normal flow until scroll threshold, then fixed</td></tr>
+      </tbody>
+    </table>
+    <pre style="margin-top:12px" data-lang="css"><span class="sel">.tooltip</span> {
+  <span class="prop">position</span>: <span class="val">absolute</span>;
+  <span class="prop">top</span>:   <span class="num">-36px</span>;
+  <span class="prop">left</span>:  <span class="num">50%</span>;
+  <span class="prop">transform</span>: <span class="val">translateX</span>(<span class="num">-50%</span>);
+  <span class="prop">z-index</span>: <span class="num">10</span>;
+}</pre>
+  </div>
+
+  <!-- 14. RESPONSIVE / MEDIA QUERIES -->
+  <div class="card accent-sky" id="responsive">
+    <div class="card-label">14 · CSS</div>
+    <h2>Responsive Design</h2>
+    <pre data-lang="css"><span class="cmt">/* Mobile-first approach */</span>
+<span class="sel">.grid</span> {
+  <span class="prop">display</span>: <span class="val">grid</span>;
+  <span class="prop">grid-template-columns</span>: <span class="num">1fr</span>;
+}
+
+<span class="cmt">/* Tablet */</span>
+<span class="kw">@media</span> (<span class="prop">min-width</span>: <span class="num">640px</span>) {
+  <span class="sel">.grid</span> { <span class="prop">grid-template-columns</span>: <span class="val">repeat</span>(<span class="num">2</span>, <span class="num">1fr</span>); }
+}
+
+<span class="cmt">/* Desktop */</span>
+<span class="kw">@media</span> (<span class="prop">min-width</span>: <span class="num">1024px</span>) {
+  <span class="sel">.grid</span> { <span class="prop">grid-template-columns</span>: <span class="val">repeat</span>(<span class="num">3</span>, <span class="num">1fr</span>); }
+}
+
+<span class="cmt">/* Dark mode */</span>
+<span class="kw">@media</span> (<span class="prop">prefers-color-scheme</span>: <span class="val">dark</span>) {
+  <span class="sel">body</span> { <span class="prop">background</span>: <span class="str">#111</span>; <span class="prop">color</span>: <span class="str">#eee</span>; }
+}</pre>
+  </div>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <span>HTML &amp; CSS Cheat Sheet · Personal Reference</span>
+  <span>Built with ♥ and pure HTML + CSS</span>
+</footer>
+
+</body>
+</html>
