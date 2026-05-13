@@ -17,13 +17,9 @@ A simple and fast cheat sheet website built to quickly access important coding c
 - CSS
 - JavaScript
 
-## 🌐 Live Demo
-
-[View Website]https://github.com/jangraarmaan0105-maker/cheatsheet.git
-
 ## 📂 Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/jangraarmaan0105-maker/cheatsheet.git
+https://github.com/jangraarmaan0105-maker/cheatsheet.git
